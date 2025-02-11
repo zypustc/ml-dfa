@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -N benchmark_custom
+#PBS -l nodes=1:ppn=48
+#PBS -j oe
+#PBS -q batch
+#PBS -V
+
+cd $PBS_O_WORKDIR
+
+# 换成我的代码
+/public/software/Python3/bin/python3.9 entrance.py b3lyp_blank_1.npz
